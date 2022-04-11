@@ -32,14 +32,14 @@
     </ul>
     <ul class="nav-bottom">
         <li class="nav-bottom-link">
-            <a href="{{url_for('core.index')}}">Home</a>
+            <a href="{{url_for('core.index')}}"><i class="fa-solid fa-list-ul fa-lg"></i></a>
         </li>
         {% if current_user.is_authenticated %}
         <li class="nav-bottom-link">
-            <a href="{{url_for('brewery_posts.create_post')}}">Create Post</a> 
+            <a href="{{url_for('brewery_posts.create_post')}}"><i class="fa-solid fa-plus fa-lg"></i></a> 
         </li>
         <li class="nav-bottom-link">
-            <a href="{{url_for('users.account')}}">Account</a>
+            <a href="{{url_for('users.account')}}"><i class="fa-solid fa-user"></i></a>
         </li>
         {% endif %}
     </ul>
