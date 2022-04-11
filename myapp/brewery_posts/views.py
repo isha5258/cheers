@@ -24,3 +24,26 @@ def brewery_post(brewery_post_id):
     brewery_post = BreweryPost.query.get_or_404(brewery_post_id) 
     return render_template('brewery_post.html', title=brewery_post.title, date=brewery_post.date, post=brewery_post)
 
+@brewery_posts.route('/<int:brewery_post_id>/update',methods=['GET','POST'])
+@login_required
+def update(brewery_post_id):
+    brewery_post = BreweryPost.query.get_or_404(brewery_post_id)
+
+    if brewery_post.author != current_user:
+        abort(403)
+
+    form = BreweryPostForm()
+
+    if form.validate_on_submit():
+        brewery_post.title = form.title.data
+        brewery_post.text = form.text.data
+        db.session.commit()
+        flash('Brewery Post Updated')
+        return redirect(url_for('brewery_posts.brewery_post',brewery_post_id=brewery_post.id))
+
+    elif request.method == 'GET':
+        form.title.data = brewery_post.title
+        form.text.data = brewery_post.text
+
+    return render_template('create_post.html',title='Updating',form=form)
+
