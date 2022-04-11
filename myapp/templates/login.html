@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
    
-<form method="POST">
+<form class="login-form" method="POST">
     {{form.hidden_tag()}}
     {{form.email.label}}{{form.email}}<br>
     {{form.password.label}}{{form.password}}<br>
