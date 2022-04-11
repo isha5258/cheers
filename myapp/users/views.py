@@ -50,7 +50,7 @@ def login():
 @users.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('core.index')) #once the user has logged out we will redirect them back home
+    return redirect(url_for('core.info')) #once the user has logged out we will redirect them back home
 
 
 #account (update UserForm)

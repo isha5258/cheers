@@ -45,6 +45,7 @@ def update(brewery_post_id):
     elif request.method == 'GET':
         form.title.data = brewery_post.title
         form.text.data = brewery_post.text
+        form.beer.data = brewery_post.beer
 
     return render_template('create_post.html',title='Updating',form=form)
 
