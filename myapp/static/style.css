@@ -22,7 +22,7 @@
 }
 .nav-top {
   grid-area: nav;
-  background-color: #667d83;
+  background-color: #86A6A0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -38,20 +38,21 @@
 
 .nav-top-link {
     float: left;
-    border-right: 1px solid white;
 }
 
 .nav-top-link > a {
   display: block;
   padding: 8px;
-  background-color: orange;
   text-decoration: none;
+  color: #112622;
 }
 
 .nav-top-link:last-child {
   border-right: none;
 }
-
+i {
+  color: #112622;
+}
 /* login css */
 
 /* .container {
