@@ -1,13 +1,14 @@
 # core/views.py 
 
 from flask import render_template, request, Blueprint
-
+from myapp.models import BreweryPost
 core = Blueprint('core', __name__)
 
 @core.route('/')
 def index():
-    
-    return render_template('index.html')
+    page = request.args.get('page', 1, type=int)
+    brewery_posts = BreweryPost.query.order_by(BreweryPost.date.desc()).paginate(page=page, per_page=5)
+    return render_template('index.html', brewery_posts=brewery_posts)
 
 @core.route('/info')
 def info():

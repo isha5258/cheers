@@ -56,3 +56,6 @@ app.register_blueprint(users)
 # Linking and registering brewery_posts views Blueprint
 from myapp.brewery_posts.views import brewery_posts
 app.register_blueprint(brewery_posts)
+
+from myapp.core.views import core 
+app.register_blueprint(core)
