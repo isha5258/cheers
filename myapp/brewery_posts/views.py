@@ -47,3 +47,16 @@ def update(brewery_post_id):
 
     return render_template('create_post.html',title='Updating',form=form)
 
+
+@brewery_posts.route('/<int:brewery_post_id>/delete',methods=['GET','POST'])
+@login_required
+def delete_post(brewery_post_id):
+
+    brewery_post = BreweryPost.query.get_or_404(brewery_post_id)
+    if brewery_post.author != current_user:
+        abort(403)
+
+    db.session.delete(brewery_post)
+    db.session.commit()
+    flash('Brewery Post Deleted')
+    return redirect(url_for('core.index'))
