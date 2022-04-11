@@ -36,14 +36,14 @@ class BreweryPost(db.Model):
     __tablename__ = 'brewery_posts'
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    brewery = db.Column(db.String(50), nullable=False)
+    title = db.Column(db.String(50), nullable=False)
     text = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
-    def __init__(self, brewery, text, user_id):
-        self.brewery = brewery
+    def __init__(self, title, text, user_id):
+        self.title = title
         self.text = text
         self.user_id= user_id
 
     def __repr__(self):
-        return f'Post ID: {self.id} -- Date: {self.date}--- Brewery: {self.Brewery}'
+        return f'Post ID: {self.id} -- Date: {self.date}--- Title: {self.Title}'
