@@ -1,16 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="jumbotron">
-  <h1>{{ post.title }}</h1>
-  <h2>{{post.author.username}}</h2>
-  <p>{{post.text}}</p>
-  <h6>Published: {{ post.date.strftime('%B %d, %Y') }}</h6>
+<div class="individual-post-container">
+  <div class="post-info-container">
+    <h1> {{post.author.username}}</h1>
+    </div>
+    <div class="beer-info-container">
+    <h3> Beer </h3>
+    <p class="beer-p">{{ post.beer }}</p>
+    <h3> Brewery </h3>
+    <p class="title-p">{{ post.title }}</p>
+    <h3> Comments </h3>
+    <p>{{post.text}}</p>
+    <h6>Posted: {{ post.date.strftime('%m/%d/%Y') }}</h6>
+  </div>
   {% if post.author == current_user %}
-    <div>
-      <a class="btn btn-secondary" href="{{ url_for('brewery_posts.update', brewery_post_id=post.id) }}">Update</a>
+    <div class="update-delete-container">
+      <a class="update-btn" href="{{ url_for('brewery_posts.update', brewery_post_id=post.id) }}">Update</a>
       <br>
       <form action="{{ url_for('brewery_posts.delete_post', brewery_post_id=post.id) }}" method="POST">
-      <input class="btn btn-danger" type="submit" value="Delete">
+      <input class="delete-btn" type="submit" value="Delete">
     </form>
     </div>
   {% endif %}

@@ -1,0 +1,68 @@
+.individual-post-container {
+
+}
+
+.post-info-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3rem 0 0 0;
+  
+}
+
+.post-info-container > h1 {
+  background-color: #595140;
+  color: #F2C48D;
+  text-shadow:  2px 2px 0px #2C3740;
+  font-size: 7vmin;
+  font-weight: 700;
+  font-family: 'Righteous', sans-serif;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 3rem;
+  border-radius: 3px;
+  box-shadow: .5px 1px .5px grey, .2px .2px 10px .75px grey;
+}
+
+.beer-info-container {
+  margin: 1rem 1rem 0;
+  box-shadow: .5px 1px .5px grey, .2px .2px 10px .75px grey;
+  background-color: rgb(232, 231, 231);
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.beer-info-container > p {
+  background-color: rgb(232, 231, 231);
+  margin: .15rem 0 2rem 1rem;
+  color: #595140;
+  font-size: .8rem;
+}
+
+.beer-info-container > h3 {
+  background-color: #595140;
+  color: #F2C48D;
+  text-shadow:  2px 2px 0px #2C3740;
+  height: 10vmin;
+  display: flex;
+  align-items: center;
+  padding-left: .5rem;
+  border-radius: 3px 3px 0 0;
+  font-size: 1.3rem;
+}
+
+.beer-info-container >h6 {
+  display: flex;
+  justify-content: flex-end;
+  color: #595140;
+  opacity: 50%;
+  font-size: .75rem;
+}
+
+.update-delete-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+

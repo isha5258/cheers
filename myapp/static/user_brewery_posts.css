@@ -58,7 +58,7 @@ body {
 }
 
 .profile-post-container > .post-text{
-  margin: .2rem 0 .25rem .75rem;
+  margin: .15rem 0 0 .75rem;
   color: #595140;
   font-size: .8rem;
 }
