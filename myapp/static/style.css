@@ -1,49 +1,11 @@
-.nav-bottom {
-  background-color: #A6654E;
-  list-style-type: none;
-  position:fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 0;
-  padding-left: 0;
-  height: 5rem;
-  box-shadow: .5px 1px .5px black, .2px .2px 10px .75px black;
-  z-index: 999;
+body {
+  height: 100vh;
+  background: linear-gradient(white,darkgrey);
+  background-repeat: no-repeat;
+  background-position:center;
 }
 
-.nav-bottom-link {
-
-}
-
-.nav-bottom-link > a {
-  
-  padding: 10px 10px;
-  background-color: #595140;
-  border-radius: 50%;
-  font-size: 2.5rem;
-  margin-bottom: 0;
-}
-
-.nav-bottom-link > a:hover {
-  background-color: #F2C48D;
-  
-}
-
-.bottom-i:hover{
-  color:#595140;
-}
-
-.nav-bottom-link:last-child {
-  border-right: none;
-}
-
-.bottom-i {
-  color: #F2C48D;
-}
-
+/* top navbar */
 .nav-top {
   grid-area: nav;
   background-color: #D97D5B;
@@ -84,14 +46,95 @@
   border-right: none;
 }
 
+/* bottom navbar */
+.nav-bottom {
+  background-color: #D97D5B;
+  list-style-type: none;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0;
+  padding-left: 0;
+  height: 5rem;
+  box-shadow: .5px 1px .5px black, .2px .2px 10px .75px black;
+  z-index: 999;
+}
+
+.nav-bottom-link {
+
+}
+
+.nav-bottom-link > a {
+  padding: .75rem;
+  background-color: #595140;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.nav-bottom-link > a:hover {
+  background-color: #F2C48D;
+}
+
+.bottom-i:hover{
+  color:#595140;
+}
+
+.nav-bottom-link:last-child {
+  border-right: none;
+}
+
+.bottom-i {
+  color: #F2C48D;
+}
+
+/* post container */
 .container {
   overflow: hidden;
-  margin-bottom: 6rem;
   margin-top: 6rem;
 }
 
-/* login css */
+.page-item {
+  margin: 1rem 0 12vmax;
+  background-color: #595140;
+  border-radius: 5px;
+}
 
-/* .container {
-  margin: 20px;
-} */
+
+/* login css */
+.login-container {
+  background-color: #D97D5B;
+  display: flex;
+  justify-content: center;
+  margin: 5rem 3rem;
+  padding: 1rem 2rem;
+}
+
+.login-form {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+}
+
+.user-brewery-posts-container {
+    overflow: hidden;
+    margin-top: 6rem;
+}
+
+.read-post-btn {
+  background-color: #595140;
+  color: #F2C48D;
+  border-radius: 3px;
+  margin: 0 3px 3px 0 ;
+}
+
+.btn-date-container {
+  display: flex;
+  justify-content: flex-end;
+
+}

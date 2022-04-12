@@ -74,5 +74,5 @@ def account():
 def user_posts(username):
     page = request.args.get('page', 1, type=int)
     user = User.query.filter_by(username=username).first_or_404()
-    brewery_posts = BreweryPost.query.filter_by(author=user).order_by(BreweryPost.date.desc()).paginate(page=page, per_page=10) 
+    brewery_posts = BreweryPost.query.filter_by(author=user).order_by(BreweryPost.date.desc()).paginate(page=page, per_page=7) 
     return render_template('user_brewery_posts.html', brewery_posts=brewery_posts, user=user)

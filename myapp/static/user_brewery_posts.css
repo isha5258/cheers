@@ -1,0 +1,44 @@
+body {
+  height: 100vh;
+  background: linear-gradient(white,darkgrey);
+  background-repeat: no-repeat;
+  background-position:center;
+}
+
+.profile-brewery-posts-container {
+  margin-top: 52px;
+  
+}
+
+.user-profile-welcome {
+  background-color: #A6654E;
+  color: #2C3740;
+  height: 12vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: .5px 1px .5px grey, .2px .2px 10px .75px grey;
+}
+
+.user-profile-welcome > h1 {
+  font-size: 7vmin;
+  font-weight: 700;
+  font-family: 'Righteous', sans-serif;
+  padding-top: 1rem;
+}
+
+.profile-post-container{
+  margin-top: 2vmin;
+  box-shadow: .5px 1px .5px grey, .2px .2px 10px .75px grey;
+  background-color: rgb(232, 231, 231);
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.profile-beername {
+  background-color: #A6654E;
+  height: 12vmin;
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+}
+
