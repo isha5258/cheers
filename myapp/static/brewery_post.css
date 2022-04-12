@@ -65,4 +65,32 @@
   justify-content: flex-end;
 }
 
+.update-btn {
+  background-color: #595140;
+  color: #F2C48D;
+  border-radius: 3px;
+  margin: 0 3px 3px 0;
+  text-decoration: none;
+  padding: .25rem;
+  border: 1px solid #2C3740;
+}
 
+.update-btn:hover {
+  background-color: #F2C48D;
+  color: #595140;
+}
+
+.delete-btn {
+  background-color: #595140;
+  color: #F2C48D;
+  border-radius: 3px;
+  margin: 0 3px 3px 0;
+  text-decoration: none;
+  padding: .25rem;
+  border: 1px solid #2C3740;
+}
+
+.delete-btn:hover {
+  background-color: red;
+  color: #2C3740;
+}
