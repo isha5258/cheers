@@ -1,6 +1,5 @@
 body {
   height: 100vh;
-  background: linear-gradient(white,darkgrey);
   background-repeat: no-repeat;
   background-position:center;
 }
@@ -130,11 +129,22 @@ body {
   background-color: #595140;
   color: #F2C48D;
   border-radius: 3px;
-  margin: 0 3px 3px 0 ;
+  margin: 0 3px 3px 0;
+  text-decoration: none;
+  padding: .25rem;
+  border: 1px solid #2C3740;
 }
 
-.btn-date-container {
+.read-post-btn:hover {
+  background-color: #F2C48D;
+  color: #595140;
+  /* border: ridge 1px #595140; */
+  border-radius: 3px;
+}
+
+.btn-read-post-container {
   display: flex;
-  justify-content: flex-end;
-
+  justify-content: space-between;
 }
+
+

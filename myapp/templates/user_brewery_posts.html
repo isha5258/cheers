@@ -9,16 +9,16 @@
   {% for post in brewery_posts.items %}
   <div class="profile-post-container">
     <h2 class="profile-beername">
-      {{post.title}}
+      {{post.beer}}
     </h2>
-    <p>{{post.text}}</p>
+    <p class="post-comment">Comments</p>
+    <p class="post-text">{{post.text}}</p>
     </p>
-    <p class="text-muted user-post-date">
-    {{post.date.strftime("%y-%m-%d")}}
-    </p>
-    <div class="btn-date-container">
-      <button class="read-post-btn" href="{{url_for('brewery_posts.brewery_post', brewery_post_id=post.id)}}">Read Brewery
-      Post</button>
+    <div class="btn-read-post-container">
+      <p class="profile-post-date text-muted user-post-date">
+      {{post.date.strftime("%m/%d/%y")}}
+      </p>
+      <a class="read-post-btn" href="{{url_for('brewery_posts.brewery_post', brewery_post_id=post.id)}}">Read Brewery Post</a>
     </div>
   </div>
     {% endfor %}
