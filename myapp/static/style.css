@@ -7,7 +7,7 @@ body {
 /* top navbar */
 .nav-top {
   grid-area: nav;
-  background-color: #D97D5B;
+  background-color: #F2C230;
   position: fixed;
   top: 0;
   width: 100%;
@@ -35,6 +35,7 @@ body {
   text-decoration: none;
   color: #2C3740;
   font-size: 1.5rem;
+  font-family: 'Righteous', sans-serif;
 }
 
 .nav-top-link > a:hover {
@@ -47,7 +48,7 @@ body {
 
 /* bottom navbar */
 .nav-bottom {
-  background-color: #D97D5B;
+  background-color: #F2C230;
   list-style-type: none;
   position:fixed;
   bottom: 0;
@@ -68,14 +69,13 @@ body {
 
 .nav-bottom-link > a {
   padding: .75rem;
-  background-color: #595140;
-  border-radius: 50%;
+  width: 2rem;
+  /* border-radius: 50%; */
   font-size: 2.5rem;
   margin-bottom: 0;
-}
-
-.nav-bottom-link > a:hover {
-  background-color: #F2C48D;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .bottom-i:hover{
@@ -87,7 +87,10 @@ body {
 }
 
 .bottom-i {
-  color: #F2C48D;
+  color: #2C3740 ;
+  width: 3rem;
+  display: flex;
+  align-items: center;
 }
 
 /* post container */
@@ -126,8 +129,9 @@ body {
 }
 
 .read-post-btn {
-  background-color: #595140;
-  color: #F2C48D;
+  background-color: #5C8EF2;
+  color: #F2DFA7;
+  text-shadow:  2px 2px 0px #2C3740;
   border-radius: 3px;
   margin: 0 6px 6px 0;
   text-decoration: none;
@@ -136,8 +140,9 @@ body {
 }
 
 .read-post-btn:hover {
-  background-color: #F2C48D;
+  background-color: #F2C230;
   color: #595140;
+  text-shadow: none;
   /* border: ridge 1px #595140; */
   border-radius: 3px;
 }
@@ -147,4 +152,16 @@ body {
   justify-content: space-between;
 }
 
+.pagination {
+  background-color: #F2D680;
+}
 
+.page-link {
+  background-color: #5C8EF2 !important;
+  color: #F2DFA7 !important;
+  text-shadow:  2px 2px 0px #2C3740;
+}
+
+.register-container {
+  margin-top: 5rem;
+}
