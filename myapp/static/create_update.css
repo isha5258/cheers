@@ -50,3 +50,38 @@
   color: white;
   text-shadow: none;
 }
+/* register and login css */
+
+.form-container {
+  margin: 3rem 3rem;
+  
+}
+
+.form-container > h1 {
+  background-color: #7b5824;
+  color: #fefdfc;
+  text-shadow:  2px 2px 0px #2C3740;
+  font-size: 7vmin;
+  font-weight: 700;
+  font-family: 'Righteous', sans-serif;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 3rem;
+  border-radius: 3px;
+  box-shadow: .5px 1px .5px grey, .2px .2px 10px .75px grey;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5rem 1rem 0;
+}
+
+.login-form-container{
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
