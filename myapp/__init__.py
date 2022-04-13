@@ -20,6 +20,7 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 # set up connection to db
 # app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost:5432/cheers"
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL').replace("://", "ql://", 1)
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -56,6 +57,3 @@ app.register_blueprint(users)
 # Linking and registering brewery_posts views Blueprint
 from myapp.brewery_posts.views import brewery_posts
 app.register_blueprint(brewery_posts)
-
-from myapp.core.views import core 
-app.register_blueprint(core)
