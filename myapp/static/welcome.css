@@ -81,7 +81,7 @@
   margin-right: 1rem;
 }
 
-.login-link, .login-link > a {
+.login-link >a {
   background-color: rgb(57,52,44);
   color: #92b0b0;
   text-shadow:  2px 2px 0px #2C3740;
@@ -91,15 +91,20 @@
   padding: .25rem .5rem;
   border: 1px solid #2C3740;
 }
+.login-link > a:hover {
+  background-color: #7b5824;
+  color: white;
+  text-shadow: none;
+}
 
 .or {
   display: flex;
   justify-content: center;
   font-family: 'Fjalla One', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
-.register-link, .register-link > a {
+.register-link > a {
   background-color: rgb(57,52,44);
   color: #92b0b0;
   text-shadow:  2px 2px 0px #2C3740;
@@ -108,4 +113,10 @@
   text-decoration: none;
   padding: .25rem .5rem;
   border: 1px solid #2C3740;
+}
+
+.register-link > a:hover {
+  background-color: #7b5824;
+  color: white;
+  text-shadow: none;
 }
