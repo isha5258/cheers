@@ -1,0 +1,73 @@
+.welcome-page {
+  margin: 3rem 0;
+}
+
+.welcome-to-cheers {
+  background-color: #7b5824;
+  color: #fefdfc;
+  text-shadow:  2px 2px 0px #2C3740;
+  font-size: 7vmin;
+  font-weight: 700;
+  font-family: 'Righteous', sans-serif;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 3rem;
+  border-radius: 3px;
+  box-shadow: .5px 1px .5px grey, .2px .2px 10px .75px grey;
+}
+
+.welcome-p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 1rem;
+  padding: 1rem;
+  box-shadow: .5px 1px .5px grey, .2px .2px 10px .75px grey;
+  background-color: rgba(57,52,44, .75);
+  font-family: 'Fjalla One', sans-serif;
+  border-radius: 3px;
+  color: #92b0b0;
+}
+
+.p {
+  text-align: center;
+  letter-spacing: .05rem;
+}
+
+.p3 {
+  font-size: 1.5rem;
+}
+
+.logout-link {
+  background-color: rgb(57,52,44);
+  color: #92b0b0;
+  text-shadow:  2px 2px 0px #2C3740;
+  border-radius: 3px ;
+  margin: 0 3px 3px 0;
+  text-decoration: none;
+  padding: .25rem .5rem;
+  border: 1px solid #2C3740;
+}
+
+.logout-link-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logout-link {
+  background-color: rgb(57,52,44);
+  color: #92b0b0;
+  text-shadow:  2px 2px 0px #2C3740;
+  border-radius: 3px ;
+  margin: 0 3px 3px 0;
+  text-decoration: none;
+  padding: .25rem .5rem;
+  border: 1px solid #2C3740;
+}
+
+.logout-link:hover {
+  background-color: #7b5824;
+  color: white;
+  text-shadow: none;
+}

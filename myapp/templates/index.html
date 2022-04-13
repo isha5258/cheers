@@ -1,23 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-  <h1>Brewery</h1>
+<div class="all-post-container">
+  <div class="index-title-container">
+    <h1 class="index-title">Posts</h1>
+  </div>
   {% for post in brewery_posts.items %}
-  <div class="card">
-    <div class="car-boy">
-      <h2 class="post-user-name">
-        <a class="username-a"
-          href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}
-        </a>
-      </h2>
-      <h4 class="post-beer-name">
-        <a class="post-beer-name-link card-title"
-          href="{{url_for('brewery_posts.brewery_post', brewery_post_id=post.id)}}">{{post.beer}}
-        </a>
-      </h4>
-      <p class="post-published-date">Published on: {{post.date.strftime('%d/%m/%Y')}}</p>
-      <a class="btn btn-primary" href="{{url_for('brewery_posts.brewery_post', brewery_post_id=post.id)}}">Read Brewery
-        Post</a>
+  <div class="index-post-container card">
+    <h2 class="post-user-name">
+      <a class="username-a"
+        href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}
+      </a>
+    </h2>
+    <h4 class="post-beer-name">
+      <a class="post-beer-name-link card-title"
+        href="{{url_for('brewery_posts.brewery_post', brewery_post_id=post.id)}}">{{post.beer}}
+      </a>
+    </h4>
+    <div class="index-post-btn">
+      <p class="post-published-date">Posted on: {{post.date.strftime('%m/%d/%Y')}}</p>
+      <a class="read-post-btn" href="{{url_for('brewery_posts.brewery_post', brewery_post_id=post.id)}}">Read Brewery Post</a>
     </div>
   </div>
   {% endfor %}
