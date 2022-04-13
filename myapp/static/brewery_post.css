@@ -36,7 +36,15 @@
   background-color: rgb(232, 231, 231);
   margin: .15rem 0 2rem 1rem;
   color: #595140;
-  font-size: .8rem;
+  font-size: 1rem;
+}
+
+.beer-info-container > .brewery-post-text {
+  background-color: rgb(232, 231, 231);
+  margin: .15rem 0 1rem 1rem;
+  color: #595140;
+  font-size: 1rem;
+  overflow-wrap:break-word;
 }
 
 .beer-info-container > h3 {
@@ -71,7 +79,7 @@
   border-radius: 3px;
   margin: 0 3px 3px 0;
   text-decoration: none;
-  padding: .25rem;
+  padding: .25rem .5rem;
   border: 1px solid #2C3740;
 }
 
@@ -94,3 +102,4 @@
   background-color: red;
   color: #2C3740;
 }
+

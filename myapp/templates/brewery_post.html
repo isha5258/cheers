@@ -10,7 +10,7 @@
     <h3> Brewery </h3>
     <p class="title-p">{{ post.title }}</p>
     <h3> Comments </h3>
-    <p>{{post.text}}</p>
+    <p class="brewery-post-text">{{post.text}}</p>
     <h6>Posted: {{ post.date.strftime('%m/%d/%Y') }}</h6>
   </div>
   {% if post.author == current_user %}

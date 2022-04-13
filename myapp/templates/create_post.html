@@ -1,24 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="-create-container">
-      <form class="form-group" method="POST">
-          {{form.hidden_tag()}}
-
-          <div class="form-group">
-            Beer Name
-            {{form.beer(class="form-control form-control-lg")}}
-          </div>
-          <div class="form-group">
-            Brewery Name
-            {{form.title(class="form-control form-control-lg")}}
-          </div>
-          <div class="form-group">
-            Comments
-            {{form.text(class="form-control form-control-lg")}}
-        </div>
-        <div class="form-group">
-          {{form.submit(class="btn btn-outline-info")}}
-        </div>
-      </form>
+<div class="create-container">
+  <form class="form-group" method="POST">
+    {{form.hidden_tag()}}
+    <div class="form-group">
+      <h3>Beer Name</h3>
+      {{form.beer(class="form-field form-control-lg")}}
     </div>
+    <div class="form-group">
+      <h3>Brewery Name</h3>
+      {{form.title(class="form-field form-control-lg")}}
+    </div>
+    <div class="form-group">
+      <h3>Comments</h3>
+      {{form.text(class="form-field form-control-lg")}}
+    </div>
+    <div class="form-btn-container">
+      <div>
+        {{form.submit(class="form-btn")}}
+      </div>
+    </div>
+  </form>
+</div>
 {% endblock %}
