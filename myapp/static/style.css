@@ -186,7 +186,7 @@ body {
 
 .post-user-name > a {
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .post-user-name > a:hover {
@@ -199,7 +199,7 @@ body {
 }
 
 .post-beer-name > a {
-  text-decoration: none;
+  text-decoration: underline;
   margin: .15rem 0 0 .75rem;
   color: #92b0b0;
   font-size: 1.2rem;
