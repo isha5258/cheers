@@ -16,12 +16,13 @@
     </p>
     <div class="btn-read-post-container">
       <p class="profile-post-date text-muted user-post-date">
-      {{post.date.strftime("%m/%d/%y")}}
+        {{post.date.strftime("%m/%d/%y")}}
       </p>
-      <a class="read-post-btn" href="{{url_for('brewery_posts.brewery_post', brewery_post_id=post.id)}}">Read Brewery Post</a>
+      <a class="read-post-btn" href="{{url_for('brewery_posts.brewery_post', brewery_post_id=post.id)}}">Read Brewery
+        Post</a>
     </div>
   </div>
-    {% endfor %}
+  {% endfor %}
 </div>
 
 <nav aria-label="Page Navigation example">

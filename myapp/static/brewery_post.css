@@ -1,11 +1,9 @@
-
-
-.post-info-container {
+.individual-post-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 3rem 0 0 0;
-  
+
 }
 
 .post-info-container > h1 {
@@ -26,27 +24,32 @@
 .beer-info-container {
   margin: 1rem 1.5rem 0;
   box-shadow: .5px 1px .5px grey, .2px .2px 10px .75px grey;
-  background-color: rgba(57,52,44, .75);
   font-family: 'Fjalla One', sans-serif;
   border-radius: 3px;
 }
 
-.beer-info-container > p {
+.info-container > p {
   background-color: rgba(57,52,44, 0);
-  margin: .15rem 0 2rem 1rem;
+  margin: .15rem 0 0 1rem;
   color: #92b0b0;
   font-size: 1rem;
+  padding: 0 0 .5rem;
 }
 
-.beer-info-container > .brewery-post-text {
+.info-container > .brewery-post-text {
   background-color: rgba(57,52,44, 0);
   margin: .15rem 0 1rem 1rem;
   color: #92b0b0;
   font-size: 1rem;
   overflow-wrap:break-word;
 }
+.info-container {
+  margin-top: .5rem;
+  background-color: rgba(57,52,44, .75);
+  border-radius: 3px;
+}
 
-.beer-info-container > h3 {
+.info-container > h3 {
   background-color: #7b5824;
   color: white;
   text-shadow:  2px 2px 0px #2C3740;
@@ -58,7 +61,7 @@
   font-size: 1.3rem;
 }
 
-.beer-info-container >h6 {
+.info-container >h6 {
   display: flex;
   justify-content: flex-end;
   color: #92b0b0;
@@ -66,17 +69,19 @@
   font-size: .75rem;
 }
 
+
 .update-delete-container{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin: 0 1.5rem;
 }
 
 .update-btn {
   background-color: rgb(57,52,44);
   color: #F2C48D;
   border-radius: 3px;
-  margin: 0 3px 3px 0;
+  margin: 0 .5rem 3px 0;
   text-decoration: none;
   padding: .25rem .5rem;
   border: 1px solid #2C3740;
@@ -91,7 +96,6 @@
   background-color: rgb(57,52,44);
   color: #F2C48D;
   border-radius: 3px;
-  margin: 0 3px 3px 0;
   text-decoration: none;
   padding: .25rem;
   border: 1px solid #2C3740;

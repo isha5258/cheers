@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="form-container">
+  <h1>Create Post</h1>
 <div class="create-container">
   <form class="form-group" method="POST">
     {{form.hidden_tag()}}
@@ -21,5 +23,6 @@
       </div>
     </div>
   </form>
+</div>
 </div>
 {% endblock %}

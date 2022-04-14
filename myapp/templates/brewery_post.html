@@ -3,24 +3,30 @@
 <div class="individual-post-container">
   <div class="post-info-container">
     <h1> {{post.author.username}}</h1>
+  </div>
+  <div class="beer-info-container">
+    <div class="info-container">
+      <h3> Beer </h3>
+      <p class="beer-p">{{ post.beer }}</p>
     </div>
-    <div class="beer-info-container">
-    <h3> Beer </h3>
-    <p class="beer-p">{{ post.beer }}</p>
-    <h3> Brewery </h3>
-    <p class="title-p">{{ post.title }}</p>
-    <h3> Comments </h3>
-    <p class="brewery-post-text">{{post.text}}</p>
-    <h6>Posted: {{ post.date.strftime('%m/%d/%Y') }}</h6>
+    <div class="info-container">
+      <h3> Brewery </h3>
+      <p class="title-p">{{ post.title }}</p>
+    </div>
+    <div class="info-container">
+      <h3> Comments </h3>
+      <p class="brewery-post-text">{{post.text}}</p>
+      <h6>Posted: {{ post.date.strftime('%m/%d/%Y') }}</h6>
+    </div>
   </div>
   {% if post.author == current_user %}
-    <div class="update-delete-container">
-      <a class="update-btn" href="{{ url_for('brewery_posts.update', brewery_post_id=post.id) }}">Update</a>
-      <br>
-      <form action="{{ url_for('brewery_posts.delete_post', brewery_post_id=post.id) }}" method="POST">
+  <div class="update-delete-container">
+    <a class="update-btn" href="{{ url_for('brewery_posts.update', brewery_post_id=post.id) }}">Update</a>
+    <br>
+    <form action="{{ url_for('brewery_posts.delete_post', brewery_post_id=post.id) }}" method="POST">
       <input class="delete-btn" type="submit" value="Delete">
     </form>
-    </div>
+  </div>
   {% endif %}
 </div>
 {% endblock content %}

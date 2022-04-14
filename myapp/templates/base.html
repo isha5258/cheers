@@ -9,7 +9,6 @@
 
   <!-- css links -->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='welcome.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user_brewery_posts.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='brewery_post.css')}}">
@@ -22,7 +21,7 @@
     crossorigin="anonymous"></script>
 
   <!-- icons and favicon -->
-  <link rel="icon" type="type="x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="icon" type="x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
   <script src="https://kit.fontawesome.com/10fddb1b18.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,7 +32,7 @@
 <body>
   <div class="top-nav-container">
     <ul class="nav-top">
-      <li class="nav-top-link top-one">
+      <li id="slide" class="nav-top-link top-one">
         <a href="{{url_for('core.info')}}"><i class="fa-solid fa-beer-mug-empty fa-lg top-i"></i></a>
       </li>
       {% if current_user.is_authenticated %}
