@@ -28,6 +28,7 @@ body {
   font-weight: 700;
   font-family: 'Righteous', sans-serif;
   padding-top: 1rem;
+  width: 300px;
 }
 
 .profile-post-container {
@@ -36,6 +37,7 @@ body {
   background-color: rgba(57,52,44, 0.75) !important;
   font-family: 'Fjalla One', sans-serif;
   border-radius: 3px;
+  width: 300px
 }
 
 .profile-beername {
@@ -67,4 +69,12 @@ body {
   font-size: .75rem;
   padding-top: 1.2rem;
   margin: 0 0 0 .25rem;
+}
+
+
+@media  screen and (min-width: 500px) {
+  .profile-post-container {
+    width: 500px;
+  }
+  
 }

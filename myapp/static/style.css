@@ -124,13 +124,10 @@ body {
 }
 
 /* post container */
-.container {
-  overflow: hidden;
-  margin-top: 6rem;
-}
+
 
 .page-item {
-  margin: 1rem 0 12vmax;
+  margin: 1rem 0 6rem;
   background-color: #595140;
   border-radius: 5px;
 }
@@ -180,6 +177,9 @@ body {
 /* all posts/index template */
 .all-post-container{
   margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .index-title-container {
@@ -192,9 +192,15 @@ body {
   padding-top: 1rem;
   display: flex;
   justify-content: center;
+  text-align: center;
   margin: 0 3rem;
   border-radius: 3px;
   box-shadow: .5px 1px .5px grey, .2px .2px 10px .75px grey;
+}
+
+.index-title-container > h1 {
+  padding: 0 2rem;
+  width: 300px;
 }
 
 .index-post-container {
@@ -203,14 +209,25 @@ body {
   background-color: rgba(57,52,44, .75) !important;
   font-family: 'Fjalla One', sans-serif;
   border-radius: 3px;
+  width: 300px;
 }
 
+
+@media  screen and (min-width: 500px) {
+  .index-post-container, .index-title-container >h1 {
+    width: 500px;
+  }
+  
+}
 .index-post-container > h2 {
   background-color: #7b5824;
   display: flex;
   justify-content: center;
 }
 
+.post-user-name{
+  box-shadow: .5px 1px .5px grey, .2px .2px 10px .75px grey;
+}
 .post-user-name > a {
   color: white;
   text-decoration: underline;

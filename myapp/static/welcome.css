@@ -1,5 +1,19 @@
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+}
+
 .welcome-page {
   margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .welcome-to-cheers {
@@ -119,4 +133,12 @@
   background-color: #7b5824;
   color: white;
   text-shadow: none;
+}
+
+@media  screen and (min-width: 500px) {
+  .welcome-page {
+    width: 500px;
+    margin-bottom: 6rem;
+  }
+  
 }

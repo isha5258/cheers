@@ -1,37 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="welcome-page">
-  <div class="welcome-to-cheers">
-    <h1>Welcome to Cheers!</h1>
-  </div>
-  <div class="welcome-p">
-    <p class="p">With the vastly growing micro brewery industry and endlessly rotating beers on tap at your favorite
-      breweries,
-      keeping track of what you like or even what you had two weeks ago can be tough. Allow Cheers to keep track of your
-      beer posts. Cheers will let you track your posts and view posts from other users as well.
-    </p>
-    <p class="p"> You will notice while posting a new beer that there is not a rating system. This was intentional.
-      Rating can be
-      very subjective, and while one type of beer may not be to someones liking such as: ipas, stouts, etc, we don't
-      want that to effect the overall rating of the beer. Instead! we opted for just a comments section, and users
-      encourage all users to utilize to describe what they liked or disliked about the beer. </p>
-    <p class="p3">Begin tracking your beers today!</p>
-  </div>
-  {% if current_user.is_authenticated %}
-  <div class="logout-link-container">
-    <a class="logout-link" href="{{url_for('users.logout')}}">Log Out</a>
-  </div>
+    <div class="welcome-to-cheers">
+      <h1>Welcome to Cheers!</h1>
+    </div>
+    <div class="welcome-p">
+      <p class="p">With the vastly growing micro brewery industry and endlessly rotating beers on tap at your favorite
+        breweries,
+        keeping track of what you like or even what you had two weeks ago can be tough. Allow Cheers to keep track of
+        your
+        beer posts. Cheers will let you track your posts and view posts from other users as well.
+      </p>
+      <p class="p"> You will notice while posting a new beer that there is not a rating system. This was intentional.
+        Rating can be
+        very subjective, and while one type of beer may not be to someones liking such as: ipas, stouts, etc, we don't
+        want that to effect the overall rating of the beer. Instead! we opted for just a comments section, and users
+        encourage all users to utilize to describe what they liked or disliked about the beer. </p>
+      <p class="p3">Begin tracking your beers today!</p>
+    </div>
+    {% if current_user.is_authenticated %}
+    <div class="logout-link-container">
+      <a class="logout-link" href="{{url_for('users.logout')}}">Log Out</a>
+    </div>
 
-  {% else %}
-  <div class="login-register-container">
-    <div class="login-link">
-      <a href="{{url_for('users.login')}}">Log In</a>
+    {% else %}
+    <div class="login-register-container">
+      <div class="login-link">
+        <a href="{{url_for('users.login')}}">Log In</a>
+      </div>
+      <div class="or">or</div>
+      <div class="register-link">
+        <a href="{{url_for('users.register')}}">Register</a>
+      </div>
     </div>
-    <div class="or">or</div>
-    <div class="register-link">
-      <a href="{{url_for('users.register')}}">Register</a>
-    </div>
-  </div>
-  {% endif %}
+    {% endif %}
+
 </div>
 {% endblock %}

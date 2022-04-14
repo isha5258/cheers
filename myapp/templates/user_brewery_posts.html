@@ -1,28 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="profile-brewery-posts-container">
-  <div>
+  <div class="all-post-container">
     <div class="user-profile-welcome" align="center">
       <h1> {{user.username}}</h1>
     </div>
-  </div>
-  {% for post in brewery_posts.items %}
-  <div class="profile-post-container">
-    <h2 class="profile-beername">
-      {{post.beer}}
-    </h2>
-    <p class="post-comment">Comments</p>
-    <p class="post-text">{{post.text}}</p>
-    </p>
-    <div class="btn-read-post-container">
-      <p class="profile-post-date text-muted user-post-date">
-        {{post.date.strftime("%m/%d/%y")}}
+    {% for post in brewery_posts.items %}
+    <div class="profile-post-container">
+      <h2 class="profile-beername">
+        {{post.beer}}
+      </h2>
+      <p class="post-comment">Comments</p>
+      <p class="post-text">{{post.text}}</p>
       </p>
-      <a class="read-post-btn" href="{{url_for('brewery_posts.brewery_post', brewery_post_id=post.id)}}">Read Brewery
-        Post</a>
+      <div class="btn-read-post-container">
+        <p class="profile-post-date text-muted user-post-date">
+          {{post.date.strftime("%m/%d/%y")}}
+        </p>
+        <a class="read-post-btn" href="{{url_for('brewery_posts.brewery_post', brewery_post_id=post.id)}}">Read Brewery
+          Post</a>
+      </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 
 <nav aria-label="Page Navigation example">
