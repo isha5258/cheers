@@ -23,6 +23,7 @@
   font-size: 7vmin;
   font-weight: 700;
   font-family: 'Righteous', sans-serif;
+  width: 300px;
   padding-top: 1rem;
   display: flex;
   justify-content: center;
@@ -140,5 +141,7 @@
     width: 500px;
     margin-bottom: 6rem;
   }
-  
+  .welcome-to-cheers {
+    width: 500px;
+  }
 }
